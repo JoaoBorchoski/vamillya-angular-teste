@@ -1,0 +1,19 @@
+<po-page-list
+  *ngIf="initialLoading == false"
+  [p-actions]="pageActions"
+  p-title="Produtos"
+>
+  <div class="po-table-remove-show-more">
+    <po-table
+      #table
+      *ngIf="items.length > 0"
+      p-actions-right
+      [p-columns]="fields"
+      p-container
+      [p-height]="listHeight"
+      [p-items]="items"
+      [p-loading]="loading"
+    >
+    </po-table>
+  </div>
+</po-page-list>
